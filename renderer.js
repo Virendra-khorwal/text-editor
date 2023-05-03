@@ -6,6 +6,9 @@ const saveBtn = document.getElementById("saveBtn");
 const boldBtn = document.getElementById('bold-btn');
 const copyButton = document.getElementById('copy-button');
 const pasteButton = document.getElementById('paste-button');
+const findInput = document.getElementById('find-input');
+const replaceInput = document.getElementById('replace-input');
+const replaceButton = document.getElementById('replace-button');
 
 const undoStack = [];
 const redoStack = [];
@@ -54,6 +57,19 @@ pasteButton.addEventListener('click', () => {
     selection.addRange(range);
     document.execCommand('paste');
     selection.removeAllRanges();
+});
+
+findButton.addEventListener('click', () => {
+    const searchText = findInput.value;
+    const searchRegex = new RegExp(searchText, 'g');
+    const editorContent = editor.innerHTML;
+    const highlightedContent = editorContent.replace(searchRegex, `<span class="highlight">${searchText}</span>`);
+    editor.innerHTML = highlightedContent;
+})
+
+replaceButton.addEventListener('click', () => {
+    const searchText = findInput.value;
+    const replaceText = replace;
 })
 
 const aceEditor = ace.edit('editor');

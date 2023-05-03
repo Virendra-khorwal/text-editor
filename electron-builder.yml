@@ -1,0 +1,13 @@
+appId: com.virendrakhorwal.texteditor
+productName: Text Editor
+win:
+  publisherName: virendrakhorwal
+  target: nsis
+  signingHashAlgorithms: ['sha256']
+  certificateFile: path/to/certificate.pfx
+  certificatePassword: mypassword
+mac:
+  category: public.app-category.developer-tools
+  identity: My Company
+  entitlements: path/to/entitlements.plist
+  entitlementsInherit: path/to/entitlements.plist
