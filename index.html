@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Text Editor</title>
-</head>
-<body>
+    <script src="ace.js"></script>
+  </head>
+  <body>
     <div class="wrapper">
-        <textarea id="editor" cols="60" rows="25"></textarea>
-        <div class="button-container">
-            <button id="openBtn" >Open</button>
-            <button id="saveBtn" >Save</button>
-        </div>
+      <textarea id="editor" cols="60" rows="25"></textarea>
+      <p id="paragraph"></p>
+      <div class="button-container">
+        <button id="openBtn">Open</button>
+        <button id="saveBtn">Save</button>
+        <button id="bold-btn"><b>B</b></button>
+        <button id="copy-button">Copy</button>
+        <button id="paste-button">Paste</button>
+      </div>
     </div>
     <script src="./renderer.js"></script>
-    <link rel="stylesheet" href="./style.css"
-</body>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/prism.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/themes/prism-okaidia.min.css"
+      rel="stylesheet"
+    />
+  </body>
 </html>
